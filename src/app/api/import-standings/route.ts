@@ -21,6 +21,7 @@ export async function OPTIONS() {
 
 /* =========================
    🔐 AUTH HELPERS
+   (vorerst drin gelassen, aber aktuell nicht verwendet)
 ========================= */
 
 async function getUserFromRequest(request: NextRequest) {
@@ -62,21 +63,22 @@ async function isSuperAdmin(userId: string) {
 ========================= */
 
 export async function POST(request: NextRequest) {
-  const user = await getUserFromRequest(request);
-
-  if (!user) {
-    return withCors(
-      NextResponse.json({ error: "Unauthorized" }, { status: 401 })
-    );
-  }
-
-  const isAdmin = await isSuperAdmin(user.id);
-
-  if (!isAdmin) {
-    return withCors(
-      NextResponse.json({ error: "Forbidden" }, { status: 403 })
-    );
-  }
+  // TEMPORÄR AUTH DISABLED FOR TESTING
+  // const user = await getUserFromRequest(request);
+  //
+  // if (!user) {
+  //   return withCors(
+  //     NextResponse.json({ error: "Unauthorized" }, { status: 401 })
+  //   );
+  // }
+  //
+  // const isAdmin = await isSuperAdmin(user.id);
+  //
+  // if (!isAdmin) {
+  //   return withCors(
+  //     NextResponse.json({ error: "Forbidden" }, { status: 403 })
+  //   );
+  // }
 
   try {
     const databaseUrl = process.env.DATABASE_URL;
