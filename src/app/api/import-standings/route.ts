@@ -92,7 +92,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    let pdfUrl: string | null = null;
+    let pdfBuffer: Buffer | null = null;
     let fileName: string | null = null;
     let eventDate: string | null = null;
     let location: string | null = null;
@@ -104,27 +104,95 @@ export async function POST(request: NextRequest) {
     if (requestContentType.includes("application/json")) {
       const body = await request.json();
 
-      pdfUrl = body.pdfUrl ?? null;
-      fileName = body.fileName ?? null;
-      eventDate = body.eventDate ?? null;
-      location = body.location ?? null;
-      countryCode = body.countryCode ?? null;
-      tournamentType = body.tournamentType ?? null;
+      const pdfUrl =
+        typeof body.pdfUrl === "string" ? body.pdfUrl.trim() : null;
+
+      fileName =
+        typeof body.fileName === "string" ? body.fileName.trim() : null;
+      eventDate =
+        typeof body.eventDate === "string" ? body.eventDate.trim() : null;
+      location =
+        typeof body.location === "string" ? body.location.trim() : null;
+      countryCode =
+        typeof body.countryCode === "string" ? body.countryCode.trim() : null;
+      tournamentType =
+        typeof body.tournamentType === "string"
+          ? body.tournamentType.trim()
+          : null;
+
+      if (!pdfUrl) {
+        return withCors(
+          NextResponse.json(
+            { error: "Keine PDF-URL angegeben" },
+            { status: 400 }
+          )
+        );
+      }
+
+      const response = await fetch(pdfUrl);
+
+      if (!response.ok) {
+        return withCors(
+          NextResponse.json(
+            { error: "PDF konnte nicht geladen werden" },
+            { status: 400 }
+          )
+        );
+      }
+
+      const pdfContentType = response.headers.get("content-type") || "";
+      if (!pdfContentType.toLowerCase().includes("pdf")) {
+        return withCors(
+          NextResponse.json(
+            { error: "Die angegebene Datei ist keine PDF" },
+            { status: 400 }
+          )
+        );
+      }
+
+      const arrayBuffer = await response.arrayBuffer();
+      pdfBuffer = Buffer.from(arrayBuffer);
+
+      if (!fileName) {
+        fileName = pdfUrl.split("/").pop() || "uploaded-results.pdf";
+      }
     } else {
       const formData = await request.formData();
 
-      pdfUrl = formData.get("pdfUrl") as string | null;
-      fileName = formData.get("fileName") as string | null;
+      const file = formData.get("file") as File | null;
+
+      if (!file) {
+        return withCors(
+          NextResponse.json(
+            { error: "Keine Datei hochgeladen" },
+            { status: 400 }
+          )
+        );
+      }
+
+      if (file.type !== "application/pdf") {
+        return withCors(
+          NextResponse.json(
+            { error: `Datei muss ein PDF sein (erhalten: ${file.type})` },
+            { status: 400 }
+          )
+        );
+      }
+
+      const arrayBuffer = await file.arrayBuffer();
+      pdfBuffer = Buffer.from(arrayBuffer);
+      fileName = file.name;
+
       eventDate = formData.get("eventDate") as string | null;
       location = formData.get("location") as string | null;
       countryCode = formData.get("countryCode") as string | null;
       tournamentType = formData.get("tournamentType") as string | null;
     }
 
-    if (!pdfUrl || typeof pdfUrl !== "string") {
+    if (!pdfBuffer) {
       return withCors(
         NextResponse.json(
-          { error: "Keine PDF-URL angegeben" },
+          { error: "PDF konnte nicht verarbeitet werden" },
           { status: 400 }
         )
       );
@@ -142,38 +210,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const response = await fetch(pdfUrl);
-
-    if (!response.ok) {
-      return withCors(
-        NextResponse.json(
-          { error: "PDF konnte nicht geladen werden" },
-          { status: 400 }
-        )
-      );
-    }
-
-    const pdfContentType = response.headers.get("content-type") || "";
-    if (!pdfContentType.toLowerCase().includes("pdf")) {
-      return withCors(
-        NextResponse.json(
-          { error: "Die angegebene Datei ist keine PDF" },
-          { status: 400 }
-        )
-      );
-    }
-
-    const arrayBuffer = await response.arrayBuffer();
-    const pdfBuffer = Buffer.from(arrayBuffer);
-
-    const derivedFileName =
-      typeof fileName === "string" && fileName.trim().length > 0
-        ? fileName
-        : pdfUrl.split("/").pop() || "uploaded-results.pdf";
-
     const result = await importStandingsPdf(databaseUrl, {
       pdfBuffer,
-      fileName: derivedFileName,
+      fileName: fileName || "uploaded-results.pdf",
       eventDate: String(eventDate),
       location: String(location),
       countryCode: String(countryCode),
