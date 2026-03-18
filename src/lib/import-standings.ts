@@ -19,6 +19,24 @@ export async function importStandingsPdf(
 
   const parsed = await parseStandingsPdf(input.pdfBuffer);
 
+  // Doppelimport-Schutz:
+  // Wenn dieselbe Datei mit gleichem Datum und Ort schon importiert wurde, abbrechen
+  const existingEvent = await sql<[{ id: string }] | []>`
+    select id
+    from public.events
+    where source_file_name = ${input.fileName}
+      and event_date = ${input.eventDate}
+      and location = ${input.location}
+    limit 1
+  `;
+
+  if (existingEvent.length > 0) {
+    await sql.end();
+    throw new Error(
+      `Dieses PDF wurde vermutlich bereits importiert. Event existiert schon mit file=${input.fileName}, date=${input.eventDate}, location=${input.location}`
+    );
+  }
+
   const importRunRows = await sql<[{ id: string }]>`
     insert into public.import_runs (
       source_file_name,
