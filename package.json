@@ -7,20 +7,18 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-
     "dev:server": "tsx src/server/index.ts",
-
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "db:seed": "curl -X POST http://localhost:3030/api/seed",
-
     "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.7.4",
+    "@supabase/supabase-js": "^2.99.2",
     "@vercel/blob": "^2.0.1",
     "bcryptjs": "^3.0.3",
     "drizzle-orm": "^0.36.0",
