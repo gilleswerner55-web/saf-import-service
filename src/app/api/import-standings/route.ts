@@ -92,14 +92,34 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const formData = await request.formData();
+    let pdfUrl: string | null = null;
+    let fileName: string | null = null;
+    let eventDate: string | null = null;
+    let location: string | null = null;
+    let countryCode: string | null = null;
+    let tournamentType: string | null = null;
 
-    const pdfUrl = formData.get("pdfUrl");
-    const fileName = formData.get("fileName");
-    const eventDate = formData.get("eventDate");
-    const location = formData.get("location");
-    const countryCode = formData.get("countryCode");
-    const tournamentType = formData.get("tournamentType");
+    const requestContentType = request.headers.get("content-type") || "";
+
+    if (requestContentType.includes("application/json")) {
+      const body = await request.json();
+
+      pdfUrl = body.pdfUrl ?? null;
+      fileName = body.fileName ?? null;
+      eventDate = body.eventDate ?? null;
+      location = body.location ?? null;
+      countryCode = body.countryCode ?? null;
+      tournamentType = body.tournamentType ?? null;
+    } else {
+      const formData = await request.formData();
+
+      pdfUrl = formData.get("pdfUrl") as string | null;
+      fileName = formData.get("fileName") as string | null;
+      eventDate = formData.get("eventDate") as string | null;
+      location = formData.get("location") as string | null;
+      countryCode = formData.get("countryCode") as string | null;
+      tournamentType = formData.get("tournamentType") as string | null;
+    }
 
     if (!pdfUrl || typeof pdfUrl !== "string") {
       return withCors(
@@ -133,8 +153,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const contentType = response.headers.get("content-type") || "";
-    if (!contentType.toLowerCase().includes("pdf")) {
+    const pdfContentType = response.headers.get("content-type") || "";
+    if (!pdfContentType.toLowerCase().includes("pdf")) {
       return withCors(
         NextResponse.json(
           { error: "Die angegebene Datei ist keine PDF" },
