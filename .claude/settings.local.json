@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(npm install:*)",
+      "Bash(pkill:*)",
+      "Bash(source:*)",
+      "Bash(nvm use:*)",
+      "Bash(nvm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node -e:*)",
+      "Bash(node:*)",
+      "Bash(export NVM_DIR=\"$HOME/.nvm\")",
+      "Bash(. \"$NVM_DIR/nvm.sh\")",
+      "Bash(npm uninstall:*)",
+      "Bash(lsof:*)",
+      "Bash(DATABASE_URL=\"postgresql://postgres:postgres@localhost:5432/saf_rankings\" npx drizzle-kit push:*)",
+      "Bash(npx drizzle-kit push:*)",
+      "Bash(npm view:*)",
+      "Bash(npm i:*)",
+      "Bash(npx drizzle-kit:*)",
+      "Bash(fnm use:*)",
+      "Bash([ -s \"$NVM_DIR/nvm.sh\" ])",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx tsx:*)"
+    ]
+  }
+}

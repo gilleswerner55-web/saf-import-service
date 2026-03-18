@@ -1,0 +1,235 @@
+{
+  "season": "2026",
+  "lastUpdated": "2026-01-26",
+  "tournaments": [
+    {
+      "name": "Züri Cup 2026",
+      "date": "2026-01-24",
+      "type": "national"
+    }
+  ],
+  "note": "Best CATEGORY (weight class) per athlete across both arms. Only points from that single best category count for both arms.",
+  "men": [
+    { "rank": 1, "name": "Ruslan Gutanu", "club": "", "points": 34, "breakdown": "Best: Men 105 | L: 1st (15+2)=17 | R: 1st (15+2)=17" },
+    { "rank": 2, "name": "Christoph Schneiter", "club": "ASC Kobra", "points": 32, "breakdown": "Best: Men 105+ | L: 1st (15+1)=16 | R: 1st (15+1)=16" },
+    { "rank": 3, "name": "Idrissou Bebane", "club": "Armwrestling Zürich", "points": 32, "breakdown": "Best: Junior -75 | L: 1st (15+1)=16 | R: 1st (15+1)=16" },
+    { "rank": 4, "name": "Bryan Wohl", "club": "Armwrestling Zürich", "points": 32, "breakdown": "Best: Junior -90 | L: 1st (15+1)=16 | R: 1st (15+1)=16" },
+    { "rank": 5, "name": "Oleksandr Matsiuk", "club": "Gorillas", "points": 31, "breakdown": "Best: Amateur -95 | L: 1st (15+3)=18 | R: 2nd (11+2)=13" },
+    { "rank": 6, "name": "Przemyslaw Tylecki", "club": "", "points": 31, "breakdown": "Best: Amateur -95 | L: 2nd (11+3)=14 | R: 1st (15+2)=17" },
+    { "rank": 7, "name": "Michael Otika", "club": "Armwrestling Zürich", "points": 29, "breakdown": "Best: Amateur -85 | L: 3rd (8+3)=11 | R: 1st (15+3)=18" },
+    { "rank": 8, "name": "Patrick Wickli", "club": "Gorillas", "points": 28, "breakdown": "Best: Master +90 | L: 2nd (11+1)=12 | R: 1st (15+1)=16" },
+    { "rank": 9, "name": "Brusel Oweiss", "club": "Eagle Grip Geneva", "points": 28, "breakdown": "Best: Men 85 | L: 1st (15+1)=16 | R: 2nd (11+1)=12" },
+    { "rank": 10, "name": "Robin Kristler", "club": "Gorillas", "points": 27, "breakdown": "Best: Men 95 | L: 3rd (8+2)=10 | R: 1st (15+2)=17" },
+    { "rank": 11, "name": "Stefan Hüppin", "club": "Armwrestling Zürich", "points": 26, "breakdown": "Best: Men 95 | L: 2nd (11+2)=13 | R: 2nd (11+2)=13" },
+    { "rank": 12, "name": "Rudy Oravec", "club": "", "points": 26, "breakdown": "Best: Amateur +95 | L: 1st (15+1)=16 | R: 3rd (8+2)=10" },
+    { "rank": 13, "name": "Noa Hartmann", "club": "Pulling Crew Zürich", "points": 25, "breakdown": "Best: Junior +90 | L: 1st (15+1)=16 | R: 3rd (8+1)=9" },
+    { "rank": 14, "name": "Zavadskyi Heorhii", "club": "Armwrestling Zürich", "points": 24, "breakdown": "Best: Amateur -75 | L: 2nd (11+2)=13 | R: 3rd (8+3)=11" },
+    { "rank": 15, "name": "Sushetskyi Mykyta", "club": "", "points": 24, "breakdown": "Best: Junior -75 | L: 2nd (11+1)=12 | R: 2nd (11+1)=12" },
+    { "rank": 16, "name": "Bruno Morante", "club": "Pulling Crew Zürich", "points": 23, "breakdown": "Best: Men 105 | L: 2nd (11+2)=13 | R: 3rd (8+2)=10" },
+    { "rank": 17, "name": "Gabriel Grimbichler", "club": "Armforce Basel", "points": 23, "breakdown": "Best: Amateur -85 | L: 1st (15+3)=18 | R: 6th (2+3)=5" },
+    { "rank": 18, "name": "Luca Specht", "club": "Armwrestling Zürich", "points": 21, "breakdown": "Best: Amateur -75 | L: 1st (15+2)=17 | R: 7th (1+3)=4" },
+    { "rank": 19, "name": "Francesco Cicala", "club": "Armwrestling Zürich", "points": 21, "breakdown": "Best: Amateur -85 | L: 4th (4+3)=7 | R: 2nd (11+3)=14" },
+    { "rank": 20, "name": "Lars Stelzer", "club": "Armwrestling Zürich", "points": 18, "breakdown": "Best: Amateur -85 | L: 2nd (11+3)=14 | R: 11th (1+3)=4" },
+    { "rank": 21, "name": "Loic Bollemt", "club": "", "points": 18, "breakdown": "Best: Junior -90 | L: 3rd (8+1)=9 | R: 3rd (8+1)=9" },
+    { "rank": 22, "name": "Stefan Schneiter", "club": "ASC Kobra", "points": 17, "breakdown": "Best: Men 105+ | L: 4th (4+1)=5 | R: 2nd (11+1)=12" },
+    { "rank": 23, "name": "Christian Bär", "club": "ASC Kobra", "points": 17, "breakdown": "Best: Amateur -95 | L: 3rd (8+3)=11 | R: 4th (4+2)=6" },
+    { "rank": 24, "name": "Redon Gashi", "club": "Underground", "points": 16, "breakdown": "Best: Junior +90 | R: 1st (15+1)=16" },
+    { "rank": 25, "name": "Pascal Girard", "club": "", "points": 16, "breakdown": "Best: Men 85 | R: 1st (15+1)=16" },
+    { "rank": 26, "name": "Francesco Naccarato", "club": "Armwrestling Zürich", "points": 16, "breakdown": "Best: Amateur -85 | L: 6th (2+3)=5 | R: 3rd (8+3)=11" },
+    { "rank": 27, "name": "Gabriele Fragnoli", "club": "", "points": 16, "breakdown": "Best: Amateur +95 | L: 2nd (11+1)=12 | R: 6th (2+2)=4" },
+    { "rank": 28, "name": "Jordan Fagone", "club": "Armwrestling Zürich", "points": 15, "breakdown": "Best: Amateur +95 | L: 3rd (8+1)=9 | R: 4th (4+2)=6" },
+    { "rank": 29, "name": "Viktor Reinok", "club": "Armwrestling Zürich", "points": 15, "breakdown": "Best: Men 95 | L: 5th (3+2)=5 | R: 3rd (8+2)=10" },
+    { "rank": 30, "name": "Janis Krumins", "club": "Armwrestling Zürich", "points": 14, "breakdown": "Best: Men 85 | L: 4th (4+1)=5 | R: 3rd (8+1)=9" },
+    { "rank": 31, "name": "Jules Geiser", "club": "ASC Kobra", "points": 14, "breakdown": "Best: Amateur -75 | R: 2nd (11+3)=14" },
+    { "rank": 32, "name": "Timotej Nestina", "club": "LAC", "points": 14, "breakdown": "Best: Junior -75 | L: 3rd (8+1)=9 | R: 4th (4+1)=5" },
+    { "rank": 33, "name": "Pietro Genitrini", "club": "", "points": 14, "breakdown": "Best: Junior +90 | L: 3rd (8+1)=9 | R: 4th (4+1)=5" },
+    { "rank": 34, "name": "Stefano Mazzocco", "club": "High Hookers Switzerland", "points": 13, "breakdown": "Best: Men 105+ | L: 3rd (8+1)=9 | R: 5th (3+1)=4" },
+    { "rank": 35, "name": "Marcel Böcherer", "club": "Armwrestling Zürich", "points": 13, "breakdown": "Best: Amateur +95 | R: 2nd (11+2)=13" },
+    { "rank": 36, "name": "Janick Messerli", "club": "ASC Kobra", "points": 12, "breakdown": "Best: Men 95 | L: 4th (4+2)=6 | R: 4th (4+2)=6" },
+    { "rank": 37, "name": "Miroslav Lyobisauljevic", "club": "", "points": 12, "breakdown": "Best: Men 105 | L: 4th (4+2)=6 | R: 4th (4+2)=6" },
+    { "rank": 38, "name": "Dario Brunner", "club": "Armwrestling Zürich", "points": 12, "breakdown": "Best: Amateur -75 | L: 5th (3+2)=5 | R: 4th (4+3)=7" },
+    { "rank": 39, "name": "Lee Petermann", "club": "Bras de fer Neuchatel", "points": 12, "breakdown": "Best: Amateur -85 | L: 5th (3+3)=6 | R: 5th (3+3)=6" },
+    { "rank": 40, "name": "Carlos Pereira", "club": "Armwrestling Zürich", "points": 11, "breakdown": "Best: Amateur -75 | L: 4th (4+2)=6 | R: 6th (2+3)=5" },
+    { "rank": 41, "name": "Ivan Sciaroni", "club": "LAC", "points": 10, "breakdown": "Best: Men 105 | L: 3rd (8+2)=10" },
+    { "rank": 42, "name": "Amar Veseli", "club": "LAC", "points": 10, "breakdown": "Best: Junior -90 | L: 4th (4+1)=5 | R: 4th (4+1)=5" },
+    { "rank": 43, "name": "Majo Atz", "club": "", "points": 10, "breakdown": "Best: Amateur -95 | L: 4th (4+3)=7 | R: 8th (1+2)=3" },
+    { "rank": 44, "name": "Yves Petermann", "club": "Bras de fer Neuchatel", "points": 9, "breakdown": "Best: Master +90 | R: 3rd (8+1)=9" },
+    { "rank": 45, "name": "Kreshnik Gashi", "club": "Gorillas", "points": 9, "breakdown": "Best: Men 105 | L: 6th (2+2)=4 | R: 5th (3+2)=5" },
+    { "rank": 46, "name": "Gilles Werner", "club": "Armforce Basel", "points": 9, "breakdown": "Best: Junior -75 | L: 4th (4+1)=5 | R: 5th (3+1)=4" },
+    { "rank": 47, "name": "Christian Käslin", "club": "Armwrestling Zürich", "points": 8, "breakdown": "Best: Men 95 | L: 7th (1+2)=3 | R: 5th (3+2)=5" },
+    { "rank": 48, "name": "Bertold Kaman", "club": "Gorillas", "points": 8, "breakdown": "Best: Men 95 | L: 6th (2+2)=4 | R: 6th (2+2)=4" },
+    { "rank": 49, "name": "Emanuel Tucarinov", "club": "Armwrestling Zürich", "points": 8, "breakdown": "Best: Amateur -85 | L: 11th (1+3)=4 | R: 9th (1+3)=4" },
+    { "rank": 50, "name": "Amishai Mueller", "club": "", "points": 8, "breakdown": "Best: Amateur -95 | L: 9th (1+3)=4 | R: 6th (2+2)=4" },
+    { "rank": 51, "name": "Kai Grundmann", "club": "", "points": 8, "breakdown": "Best: Amateur -85 | L: 7th (1+3)=4 | R: 8th (1+3)=4" },
+    { "rank": 52, "name": "Marco Melcarne", "club": "Armwrestling Zürich", "points": 8, "breakdown": "Best: Amateur -85 | L: 8th (1+3)=4 | R: 10th (1+3)=4" },
+    { "rank": 53, "name": "Daniel Kerber", "club": "LAC", "points": 8, "breakdown": "Best: Amateur -85 | L: 10th (1+3)=4 | R: 7th (1+3)=4" },
+    { "rank": 54, "name": "Maxime Jeammeret", "club": "", "points": 7, "breakdown": "Best: Amateur -95 | L: 11th (1+3)=4 | R: 7th (1+2)=3" },
+    { "rank": 55, "name": "Marcos Rebelo", "club": "", "points": 7, "breakdown": "Best: Men 105 | L: 7th (1+2)=3 | R: 6th (2+2)=4" },
+    { "rank": 56, "name": "Sugee Duraisamy", "club": "", "points": 7, "breakdown": "Best: Amateur -75 | L: 8th (1+2)=3 | R: 11th (1+3)=4" },
+    { "rank": 57, "name": "Benjamin Falco", "club": "Armwrestling Zürich", "points": 7, "breakdown": "Best: Amateur -75 | L: 9th (1+2)=3 | R: 9th (1+3)=4" },
+    { "rank": 58, "name": "Liam Rohner", "club": "", "points": 7, "breakdown": "Best: Amateur -85 | R: 4th (4+3)=7" },
+    { "rank": 59, "name": "Angelo Rebelo", "club": "", "points": 6, "breakdown": "Best: Men 105 | L: 9th (1+2)=3 | R: 9th (1+2)=3" },
+    { "rank": 60, "name": "Nick Heuzeroth", "club": "High Hookers Switzerland", "points": 5, "breakdown": "Best: Amateur +95 | R: 5th (3+2)=5" },
+    { "rank": 61, "name": "Ivan Pezzetta", "club": "", "points": 4, "breakdown": "Best: Amateur -85 | L: 9th (1+3)=4" },
+    { "rank": 62, "name": "Thomas Blöchlinger", "club": "Armwrestling Zürich", "points": 4, "breakdown": "Best: Amateur -75 | L: 6th (2+2)=4" },
+    { "rank": 63, "name": "Teixeira Telmo", "club": "", "points": 4, "breakdown": "Best: Amateur -95 | L: 8th (1+3)=4" },
+    { "rank": 64, "name": "Boris Aebi", "club": "", "points": 4, "breakdown": "Best: Amateur -75 | R: 8th (1+3)=4" },
+    { "rank": 65, "name": "Rodrigo Raposo", "club": "", "points": 4, "breakdown": "Best: Amateur -75 | R: 10th (1+3)=4" },
+    { "rank": 66, "name": "Levin Koc", "club": "", "points": 4, "breakdown": "Best: Junior -90 | L: 5th (3+1)=4" },
+    { "rank": 67, "name": "Dario Romano", "club": "ASC Taurus", "points": 4, "breakdown": "Best: Master +90 | R: 5th (3+1)=4" },
+    { "rank": 68, "name": "Shala Perparim", "club": "", "points": 3, "breakdown": "Best: Amateur +95 | R: 7th (1+2)=3" },
+    { "rank": 69, "name": "Neo Morel", "club": "", "points": 3, "breakdown": "Best: Amateur +95 | R: 8th (1+2)=3" }
+  ],
+  "women": [
+    { "rank": 1, "name": "Snizhana Babaieva", "club": "LAC", "points": 32, "breakdown": "Best: Women -70 | L: 1st (15+1)=16 | R: 1st (15+1)=16" },
+    { "rank": 2, "name": "Aleyna Gunes", "club": "LAC", "points": 32, "breakdown": "Best: Women +70 | L: 1st (15+1)=16 | R: 1st (15+1)=16" },
+    { "rank": 3, "name": "Leandra Sarikos", "club": "LAC", "points": 27, "breakdown": "Best: Junior -70 | L: 2nd (11+0)=11 | R: 1st (15+1)=16" },
+    { "rank": 4, "name": "Anina Sarikos", "club": "LAC", "points": 27, "breakdown": "Best: Junior -70 | L: 1st (15+0)=15 | R: 2nd (11+1)=12" },
+    { "rank": 5, "name": "Eda Günes", "club": "LAC", "points": 24, "breakdown": "Best: Women +70 | L: 2nd (11+1)=12 | R: 2nd (11+1)=12" },
+    { "rank": 6, "name": "Marlene Toggenburger", "club": "Gorillas", "points": 21, "breakdown": "Best: Women -70 | L: 2nd (11+1)=12 | R: 3rd (8+1)=9" },
+    { "rank": 7, "name": "Elena Zanini", "club": "High Hookers Switzerland", "points": 18, "breakdown": "Best: Women +70 | L: 3rd (8+1)=9 | R: 3rd (8+1)=9" },
+    { "rank": 8, "name": "Somaya Mohammadi", "club": "", "points": 9, "breakdown": "Best: Junior -70 | R: 3rd (8+1)=9" }
+  ],
+  "clubs": [
+    {
+      "rank": 1,
+      "club": "Armwrestling Zürich",
+      "points": 334,
+      "athletes": 20,
+      "breakdown": {
+        "Idrissou Bebane": { "total": 32 },
+        "Bryan Wohl": { "total": 32 },
+        "Michael Otika": { "total": 29 },
+        "Stefan Hüppin": { "total": 26 },
+        "Zavadskyi Heorhii": { "total": 24 },
+        "Luca Specht": { "total": 21 },
+        "Francesco Cicala": { "total": 21 },
+        "Lars Stelzer": { "total": 18 },
+        "Francesco Naccarato": { "total": 16 },
+        "Jordan Fagone": { "total": 15 },
+        "Viktor Reinok": { "total": 15 },
+        "Janis Krumins": { "total": 14 },
+        "Marcel Böcherer": { "total": 13 },
+        "Dario Brunner": { "total": 12 },
+        "Carlos Pereira": { "total": 11 },
+        "Christian Käslin": { "total": 8 },
+        "Emanuel Tucarinov": { "total": 8 },
+        "Marco Melcarne": { "total": 8 },
+        "Benjamin Falco": { "total": 7 },
+        "Thomas Blöchlinger": { "total": 4 }
+      }
+    },
+    {
+      "rank": 2,
+      "club": "LAC",
+      "points": 184,
+      "athletes": 9,
+      "breakdown": {
+        "Snizhana Babaieva": { "total": 32 },
+        "Aleyna Gunes": { "total": 32 },
+        "Leandra Sarikos": { "total": 27 },
+        "Anina Sarikos": { "total": 27 },
+        "Eda Günes": { "total": 24 },
+        "Timotej Nestina": { "total": 14 },
+        "Ivan Sciaroni": { "total": 10 },
+        "Amar Veseli": { "total": 10 },
+        "Daniel Kerber": { "total": 8 }
+      }
+    },
+    {
+      "rank": 3,
+      "club": "Gorillas",
+      "points": 124,
+      "athletes": 6,
+      "breakdown": {
+        "Oleksandr Matsiuk": { "total": 31 },
+        "Patrick Wickli": { "total": 28 },
+        "Robin Kristler": { "total": 27 },
+        "Marlene Toggenburger": { "total": 21 },
+        "Kreshnik Gashi": { "total": 9 },
+        "Bertold Kaman": { "total": 8 }
+      }
+    },
+    {
+      "rank": 4,
+      "club": "ASC Kobra",
+      "points": 92,
+      "athletes": 5,
+      "breakdown": {
+        "Christoph Schneiter": { "total": 32 },
+        "Stefan Schneiter": { "total": 17 },
+        "Christian Bär": { "total": 17 },
+        "Jules Geiser": { "total": 14 },
+        "Janick Messerli": { "total": 12 }
+      }
+    },
+    {
+      "rank": 5,
+      "club": "Pulling Crew Zürich",
+      "points": 48,
+      "athletes": 2,
+      "breakdown": {
+        "Noa Hartmann": { "total": 25 },
+        "Bruno Morante": { "total": 23 }
+      }
+    },
+    {
+      "rank": 6,
+      "club": "High Hookers Switzerland",
+      "points": 36,
+      "athletes": 3,
+      "breakdown": {
+        "Elena Zanini": { "total": 18 },
+        "Stefano Mazzocco": { "total": 13 },
+        "Nick Heuzeroth": { "total": 5 }
+      }
+    },
+    {
+      "rank": 7,
+      "club": "Armforce Basel",
+      "points": 32,
+      "athletes": 2,
+      "breakdown": {
+        "Gabriel Grimbichler": { "total": 23 },
+        "Gilles Werner": { "total": 9 }
+      }
+    },
+    {
+      "rank": 8,
+      "club": "Eagle Grip Geneva",
+      "points": 28,
+      "athletes": 1,
+      "breakdown": {
+        "Brusel Oweiss": { "total": 28 }
+      }
+    },
+    {
+      "rank": 9,
+      "club": "Bras de fer Neuchatel",
+      "points": 21,
+      "athletes": 2,
+      "breakdown": {
+        "Lee Petermann": { "total": 12 },
+        "Yves Petermann": { "total": 9 }
+      }
+    },
+    {
+      "rank": 10,
+      "club": "Underground",
+      "points": 16,
+      "athletes": 1,
+      "breakdown": {
+        "Redon Gashi": { "total": 16 }
+      }
+    },
+    {
+      "rank": 11,
+      "club": "ASC Taurus",
+      "points": 4,
+      "athletes": 1,
+      "breakdown": {
+        "Dario Romano": { "total": 4 }
+      }
+    }
+  ]
+}
