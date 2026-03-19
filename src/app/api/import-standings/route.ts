@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { importStandingsPdf } from "@/lib/import-standings";
+import {
+  importStandingsPdf,
+  importStandingsIntoExistingEvent,
+} from "@/lib/import-standings";
 import { createClient } from "@supabase/supabase-js";
 
 export const runtime = "nodejs";
@@ -19,11 +22,7 @@ export async function OPTIONS() {
   return withCors(new NextResponse(null, { status: 200 }));
 }
 
-/* =========================
-   🔐 AUTH HELPERS
-   (vorerst drin gelassen, aber aktuell nicht verwendet)
-========================= */
-
+// Vorerst drin gelassen, aktuell aber weiter deaktiviert
 async function getUserFromRequest(request: NextRequest) {
   const authHeader = request.headers.get("authorization");
   if (!authHeader) return null;
@@ -58,22 +57,15 @@ async function isSuperAdmin(userId: string) {
   return !!data;
 }
 
-/* =========================
-   🚀 MAIN ENDPOINT
-========================= */
-
 export async function POST(request: NextRequest) {
   // TEMPORÄR AUTH DISABLED FOR TESTING
   // const user = await getUserFromRequest(request);
-  //
   // if (!user) {
   //   return withCors(
   //     NextResponse.json({ error: "Unauthorized" }, { status: 401 })
   //   );
   // }
-  //
   // const isAdmin = await isSuperAdmin(user.id);
-  //
   // if (!isAdmin) {
   //   return withCors(
   //     NextResponse.json({ error: "Forbidden" }, { status: 403 })
@@ -94,6 +86,9 @@ export async function POST(request: NextRequest) {
 
     let pdfBuffer: Buffer | null = null;
     let fileName: string | null = null;
+    let eventId: string | null = null;
+
+    // Nur für alten Fallback-Modus ohne bestehendes Event
     let eventDate: string | null = null;
     let location: string | null = null;
     let countryCode: string | null = null;
@@ -109,6 +104,9 @@ export async function POST(request: NextRequest) {
 
       fileName =
         typeof body.fileName === "string" ? body.fileName.trim() : null;
+      eventId =
+        typeof body.eventId === "string" ? body.eventId.trim() : null;
+
       eventDate =
         typeof body.eventDate === "string" ? body.eventDate.trim() : null;
       location =
@@ -183,6 +181,9 @@ export async function POST(request: NextRequest) {
       pdfBuffer = Buffer.from(arrayBuffer);
       fileName = file.name;
 
+      const rawEventId = formData.get("eventId");
+      eventId = typeof rawEventId === "string" ? rawEventId.trim() : null;
+
       eventDate = formData.get("eventDate") as string | null;
       location = formData.get("location") as string | null;
       countryCode = formData.get("countryCode") as string | null;
@@ -198,12 +199,30 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    if (!fileName) {
+      fileName = "uploaded-results.pdf";
+    }
+
+    // NEUER HAUPTMODUS:
+    // Import in bestehendes Event
+    if (eventId) {
+      const result = await importStandingsIntoExistingEvent(databaseUrl, {
+        eventId,
+        pdfBuffer,
+        fileName,
+      });
+
+      return withCors(NextResponse.json(result));
+    }
+
+    // ALTER FALLBACK-MODUS:
+    // Nur falls noch kein bestehendes Event verwendet wird
     if (!eventDate || !location || !countryCode || !tournamentType) {
       return withCors(
         NextResponse.json(
           {
             error:
-              "eventDate, location, countryCode und tournamentType sind Pflichtfelder",
+              "Für den Fallback-Import ohne eventId sind eventDate, location, countryCode und tournamentType Pflichtfelder",
           },
           { status: 400 }
         )
@@ -212,7 +231,7 @@ export async function POST(request: NextRequest) {
 
     const result = await importStandingsPdf(databaseUrl, {
       pdfBuffer,
-      fileName: fileName || "uploaded-results.pdf",
+      fileName,
       eventDate: String(eventDate),
       location: String(location),
       countryCode: String(countryCode),
