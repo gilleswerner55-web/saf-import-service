@@ -27,3 +27,8 @@ declare module 'pdf-parse' {
   function pdfParse(dataBuffer: Buffer): Promise<PDFData>
   export = pdfParse
 }
+
+declare module "pdf-parse-debugging-disabled" {
+  const pdfParse: any
+  export default pdfParse
+}
